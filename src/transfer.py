@@ -9,8 +9,6 @@ import matplotlib.pyplot as plt
 import torchvision.transforms as transforms
 from torchvision.models import vgg19, VGG19_Weights
 
-import copy
-
 
 def image_loader(loader, image_name):
     image = Image.open(image_name)
