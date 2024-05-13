@@ -267,4 +267,4 @@ if __name__ == "__main__":
 
     # sphinx_gallery_thumbnail_number = 4
     plt.ioff()
-    plt.savefig("./data/out.png")
+    plt.savefig("./data/transfer/out.png")

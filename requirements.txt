@@ -1,4 +1,5 @@
+matplotlib
+pillow
 torch
 torchvision
-pillow
-matplotlib
+transformers
