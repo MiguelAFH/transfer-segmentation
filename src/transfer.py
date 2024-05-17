@@ -10,7 +10,7 @@ import torchvision.transforms as transforms
 from torchvision.models import vgg19, VGG19_Weights
 
 
-def image_loader(loader, image_name):
+def image_loader(loader, image_name, device):
     image = Image.open(image_name)
     # fake batch dimension required to fit network's input dimensions
     image = loader(image).unsqueeze(0)
@@ -19,6 +19,7 @@ def image_loader(loader, image_name):
 def imshow(tensor, title=None):
     image = tensor.cpu().clone()  # we clone the tensor to not do changes on it
     image = image.squeeze(0)      # remove the fake batch dimension
+    unloader = transforms.ToPILImage()
     image = unloader(image)
     plt.imshow(image)
     if title is not None:
@@ -221,19 +222,17 @@ if __name__ == "__main__":
     transforms.Resize(imsize),  # scale imported image
     transforms.ToTensor()])  # transform it into a torch tensor
     
-    style_img = image_loader(loader, "./data/transfer/picasso.jpg")
-    content_img = image_loader(loader, "./data/transfer/dancing.jpg")
+    style_img = image_loader(loader, "./data/transfer/picasso.jpg", device)
+    content_img = image_loader(loader, "./data/transfer/chichen.jpg", device)
 
+    # Resize style image to match content image
+    style_img = F.interpolate(style_img, size=content_img.shape[-2:])
     
     assert style_img.size() == content_img.size(), \
     "we need to import style and content images of the same size"
     
-    unloader = transforms.ToPILImage()  # reconvert into PIL image
-
     plt.ion()
 
-    
-    plt.figure()
     imshow(style_img, title='Style Image')
 
     plt.figure()
