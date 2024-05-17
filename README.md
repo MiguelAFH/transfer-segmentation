@@ -23,3 +23,5 @@ This will generate a segmented image under 'data/segmentation/out.png'
 This will generate an image with style transfer under 'data/transfer/out.png'
 
 ``
+
+Test
