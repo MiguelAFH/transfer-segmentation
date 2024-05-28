@@ -6,4 +6,8 @@ transformers
 opencv-python-headless
 supervision
 jupyter_bbox_widget
+diffusers
+invisible_watermark
+accelerate
+safetensors
 git+https://github.com/facebookresearch/segment-anything.git
