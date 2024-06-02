@@ -1,5 +1,9 @@
 import cv2
 import numpy as np
+import torchvision.transforms as transforms
+import torch
+
+from PIL import Image
 
 # Draw a prediction box with confidence and title
 def draw_prediction(frame, classes, classId, conf, left, top, right, bottom):
@@ -60,3 +64,27 @@ def process_frame(frame, outs, classes, confThreshold, nmsThreshold):
         width = box[2]
         height = box[3]
         draw_prediction(frame, classes, classIds[i], confidences[i], left, top, left + width, top + height)
+        
+def log(*msg):
+    print("="*50)
+    print(*msg)
+    
+    
+class ImageLoader:
+    
+    def __init__(self, device, imsize=512):
+        self.device = device
+        self.loader = transforms.Compose([
+            transforms.Resize(imsize),  # scale imported image
+            transforms.ToTensor()])  # transform it into a torch tensor
+    
+    def load2(self, image_path: str) -> torch.Tensor:
+        image = cv2.imread(image_path)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image = self.loader(image).unsqueeze(0)
+        return image
+
+    def load(self, image_path: str) -> torch.Tensor:
+        image = Image.open(image_path)
+        image = self.loader(image).unsqueeze(0)
+        return image.to(self.device, torch.float)
