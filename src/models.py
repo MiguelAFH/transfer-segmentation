@@ -21,7 +21,7 @@ class StyleTransfer:
         log("Running style transfer")
         input_img = content_img.clone()
         return run_style_transfer(self.model, self.cnn_normalization_mean, self.cnn_normalization_std,
-                            content_img, style_img, input_img)
+                            content_img, style_img, input_img, num_steps=300)
 
 
 class SAMAnnotator:

@@ -3,7 +3,6 @@ import numpy as np
 import cv2
 import supervision as sv
 import argparse
-import torch
 
 from typing import List
 from inference.models.yolo_world.yolo_world import YOLOWorld
@@ -48,7 +47,7 @@ class YOLOAnnotator:
         return bbox
 
     def get_bounding_box(self, image):
-        results = self.model.infer(image, confidence=0.001)
+        results = self.model.infer(image, confidence=0.003)
         detections = sv.Detections.from_inference(results)
         bbox = self.get_bbox(detections)
         return bbox, detections
@@ -56,8 +55,8 @@ class YOLOAnnotator:
     def annotate_image(self, image):
         _, detections = self.get_bounding_box(image)
         annotated_image = image.copy()
-        annotated_image = self.box_annotator.annotate(annotated_image, detections)
-        annotated_image = self.label_annotator.annotate(annotated_image, detections)
+        annotated_image = self.box_annotator.annotate(annotated_image, detections[0])
+        annotated_image = self.label_annotator.annotate(annotated_image, detections[0])
         return annotated_image
     
     

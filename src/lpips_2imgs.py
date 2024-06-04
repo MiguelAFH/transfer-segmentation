@@ -46,9 +46,37 @@ def find_similar_images(file_path: str, compare_dir: str, use_gpu: bool = True, 
 			gc.collect()
 
 		# print('Distance: %.3f'%dist)
-		similar.append([dist, file])
+		similar.append([dist, file, os.path.basename(file_path)])
 	return sorted(similar, key=lambda x: x[0])
-	
+
+
+def compute_similaty(file_path: str, compare_file_path: str, use_gpu: bool = True, version: str = '0.1'):
+	loss_fn = lpips.LPIPS(net='alex',version=version)
+	if use_gpu:
+		loss_fn.cuda()
+
+	img1 = lpips.im2tensor(lpips.load_image(compare_file_path))
+	img0 = lpips.im2tensor(cv2.resize(lpips.load_image(file_path),(img1.shape[3], img1.shape[2]))) # RGB image from [-1,1]
+
+	if use_gpu:
+		img0 = img0.cuda()
+		img1 = img1.cuda()
+
+	# Compute distance
+	with torch.no_grad():  # This ensures that no gradients are computed which can save memory
+		dist = loss_fn.forward(img0, img1)
+		dist = dist.item()
+
+	if use_gpu:
+		img0 = img0.cpu()
+		img1 = img1.cpu()
+		del img0
+		del img1
+		torch.cuda.empty_cache()
+		gc.collect()
+
+	print('Distance: %.3f'%dist)
+	return dist
 
 if __name__ == '__main__':
 	opt = parse_args()
