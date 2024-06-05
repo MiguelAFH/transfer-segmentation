@@ -171,7 +171,7 @@ def combine_images(stylized_images, mask, image_rgb):
     
     def apply_mask(image):
         image = image[:mask.shape[0], :mask.shape[1],:]
-        image = stylized_baseline_image * mask[:, :, np.newaxis]
+        image = image * mask[:, :, np.newaxis]
         return image
     combined_images = []
     for baseline_image_name, generated_image_name, stylized_baseline_image, stylized_generated_image in stylized_images:
