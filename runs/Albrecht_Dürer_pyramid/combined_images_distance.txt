@@ -1,0 +1,6 @@
+Original distance, Combined distance, Baseline image path, Generated image path
+0.5858577489852905, 0.10736487805843353, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_61.jpg, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_iteration_24.png
+0.5903379321098328, 0.11011727899312973, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_225.jpg, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_iteration_24.png
+0.5969295501708984, 0.10355956852436066, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_222.jpg, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_iteration_24.png
+0.6024259328842163, 0.1082337498664856, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_252.jpg, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_iteration_24.png
+0.6055447459220886, 0.12574779987335205, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_43.jpg, runs/Albrecht_Dürer_pyramid/out_Albrecht_Dürer_iteration_24.png

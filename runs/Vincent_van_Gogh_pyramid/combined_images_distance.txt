@@ -1,0 +1,6 @@
+Original distance, Combined distance, Baseline image path, Generated image path
+0.6039312481880188, 0.18386410176753998, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_190.jpg, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_iteration_18.png
+0.6126315593719482, 0.19534730911254883, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_697.jpg, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_iteration_8.png
+0.6154205203056335, 0.19534730911254883, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_697.jpg, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_iteration_2.png
+0.6157401204109192, 0.17709563672542572, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_327.jpg, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_iteration_11.png
+0.6187222599983215, 0.17709563672542572, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_327.jpg, runs/Vincent_van_Gogh_pyramid/out_Vincent_van_Gogh_iteration_13.png

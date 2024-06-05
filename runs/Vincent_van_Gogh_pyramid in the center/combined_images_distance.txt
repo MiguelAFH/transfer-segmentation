@@ -1,0 +1,2 @@
+Original distance, Combined distance, Baseline image path, Generated image path
+0.6039312481880188, 0.3331925570964813, runs/Vincent_van_Gogh_pyramid in the center/out_Vincent_van_Gogh_190.jpg, runs/Vincent_van_Gogh_pyramid in the center/out_Vincent_van_Gogh_iteration_18.png

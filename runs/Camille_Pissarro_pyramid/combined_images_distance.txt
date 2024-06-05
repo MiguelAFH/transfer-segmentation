@@ -1,0 +1,6 @@
+Original distance, Combined distance, Baseline image path, Generated image path
+0.641160249710083, 0.11026586592197418, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_91.jpg, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_iteration_18.png
+0.6520789861679077, 0.11026586592197418, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_91.jpg, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_iteration_7.png
+0.6561557650566101, 0.11026586592197418, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_91.jpg, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_iteration_9.png
+0.6636415719985962, 0.07320091873407364, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_30.jpg, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_iteration_20.png
+0.6681207418441772, 0.1876583993434906, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_89.jpg, runs/Camille_Pissarro_pyramid/out_Camille_Pissarro_iteration_11.png
