@@ -14,13 +14,9 @@ Activate the environment via:
 
 After creating and activating the python environment, run the following commands to verify everything was installed properly:
 
-`python3 src/segmentation.py`
+`python3 src/run2.py -h` 
 
-This will generate a segmented image under 'data/segmentation/out.png'
-
-`python3 src/transfer.py`
-
-This will generate an image with style transfer under 'data/transfer/out.png'
+This will print the usage for the model
 
 ``
 
