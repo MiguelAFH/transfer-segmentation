@@ -1,5 +1,9 @@
 # transfer-segmentation
 
+This project is intended for running style transfer and segmentation using open vocabulary for both open detection and style generation.
+
+
+
 ## Setup
 
 Create the python venv by running:
