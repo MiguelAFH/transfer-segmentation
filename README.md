@@ -2,7 +2,7 @@
 
 This project is intended for running style transfer and segmentation using open vocabulary for both open detection and style generation.
 
-
+![alt text](https://github.com/MiguelAFH/transfer-segmentation/blob/main/assets/style_example.png?raw=true)
 
 ## Setup
 
